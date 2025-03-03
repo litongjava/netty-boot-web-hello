@@ -24,7 +24,7 @@ public class WebConfig {
     HttpRequestRouter httpRouter = NettyBootServer.me().getHttpRequestRouter();
     OkHandler okHandler = Aop.get(OkHandler.class);
     httpRouter.add("/txt", okHandler::txt);
-    httpRouter.add("/json", okHandler::json);
+    httpRouter.add("/ok", okHandler::json);
     httpRouter.add("/echo", okHandler::echo);
 
     // 设置 WebSocket 路由
